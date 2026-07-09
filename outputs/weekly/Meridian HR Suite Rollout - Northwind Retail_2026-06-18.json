@@ -1,0 +1,74 @@
+{
+  "project_name": "Meridian HR Suite Rollout - Northwind Retail",
+  "project_manager": "Ayesha Kulkarni",
+  "as_of": "2026-06-18",
+  "source_file": "data/Project_Plan_C_Sample.xlsx",
+  "overall_rag": "Green",
+  "composite_score": 0.0,
+  "dimensions": {
+    "schedule": {
+      "score": 0,
+      "label": "Green",
+      "evidence": [
+        "No meaningful schedule slippage detected in active tasks."
+      ],
+      "metrics": {
+        "overdue_count": 0,
+        "overdue_pct": 0.0,
+        "flagged_red_count": 0,
+        "flagged_amber_count": 0,
+        "critical_overdue_count": 0,
+        "spi_lite": 1.0
+      }
+    },
+    "milestones": {
+      "score": 0,
+      "label": "Green",
+      "evidence": [
+        "All 9 major phases are on or ahead of their planned end dates (or already complete)."
+      ],
+      "metrics": {
+        "phases_total": 9,
+        "phases_late": 0
+      }
+    },
+    "blockers": {
+      "score": 0,
+      "label": "Green",
+      "evidence": [
+        "No tasks identified as stuck behind unmet dependencies."
+      ],
+      "metrics": {
+        "stuck_count": 0,
+        "on_hold_count": 0
+      }
+    },
+    "budget": {
+      "score": null,
+      "label": "Unknown",
+      "evidence": [
+        "No budget/cost-actuals data was available in this file; budget health excluded from this report (see methodology doc)."
+      ],
+      "metrics": {}
+    },
+    "sentiment": {
+      "score": 0,
+      "label": "Green",
+      "evidence": [
+        "0 of 1 status comments contain risk/delay language (keyword proxy, not true sentiment analysis)."
+      ],
+      "metrics": {
+        "comment_count": 1,
+        "negative_pct": 0.0
+      }
+    }
+  },
+  "data_quality_warnings": [],
+  "task_counts": {
+    "total": 10,
+    "completed": 4,
+    "in_progress": 3,
+    "not_started": 3
+  },
+  "narrative": "Meridian HR Suite Rollout - Northwind Retail is healthy and on track. No dimension is currently flagged Amber or Red; all tracked signals are within tolerance. Note: budget could not be assessed (data not available in source file) and were excluded from the composite score."
+}

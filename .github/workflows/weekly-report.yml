@@ -1,0 +1,38 @@
+name: Weekly Project Health Report
+
+on:
+  schedule:
+    # Every Monday 07:00 UTC
+    - cron: "0 7 * * 1"
+  workflow_dispatch: {}   # allows manual "Run workflow" trigger too
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run health agent on all project plans
+        env:
+          # Optional: set this repo secret to get LLM-written narratives.
+          # Without it, the agent falls back to rule-based narratives
+          # automatically -- the workflow still runs and still produces
+          # full reports.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python -m agent.run_agent "data/*.xlsx" --outdir outputs/weekly
+
+      - name: Commit generated reports
+        run: |
+          git config user.name "project-health-agent"
+          git config user.email "actions@users.noreply.github.com"
+          git add outputs/weekly
+          git diff --cached --quiet || git commit -m "Weekly project health report $(date +%F)"
+          git push
