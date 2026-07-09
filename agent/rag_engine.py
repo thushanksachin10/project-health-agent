@@ -37,8 +37,8 @@ def score_schedule(plan: ProjectPlan) -> dict:
     tasks_with_enddate = [t for t in active if t.end_date]
     overdue = [t for t in tasks_with_enddate if t.end_date < as_of]
 
-    flagged = [t for t in plan.tasks if (t.schedule_health or "").strip().lower() in ("red",)]
-    flagged_amber = [t for t in plan.tasks if (t.schedule_health or "").strip().lower() in ("yellow", "amber")]
+    flagged = [t for t in plan.tasks if (t.schedule_health or "").strip().lower() == "red" or (t.task_rag or "").strip().lower() == "red"]
+    flagged_amber = [t for t in plan.tasks if (t.schedule_health or "").strip().lower() in ("yellow", "amber") or (t.task_rag or "").strip().lower() in ("yellow", "amber")]
 
     critical_overdue = [t for t in overdue if t.critical]
 
@@ -225,7 +225,8 @@ def score_sentiment(plan: ProjectPlan) -> dict:
     export (no PM status-comment free text present). We surface any
     status/PM comments we do find as a light-touch proxy, and otherwise
     mark Unknown rather than fabricate a sentiment reading."""
-    comments = [t.status_comment for t in plan.tasks if t.status_comment]
+    comments = [t.status_comment for t in plan.tasks if t.status_comment] + \
+               [t.comments_text for t in plan.tasks if t.comments_text]
     if not comments:
         return {
             "score": None,

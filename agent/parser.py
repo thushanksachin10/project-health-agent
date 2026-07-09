@@ -102,6 +102,8 @@ class Task:
     ancestors: Optional[int] = None  # outline depth; 1 = top-level phase
     owner: Optional[str] = None
     status_comment: Optional[str] = None
+    comments_text: Optional[str] = None
+    task_rag: Optional[str] = None
     area: Optional[str] = None
     phase_milestone: Optional[str] = None
     raw: dict = field(default_factory=dict)
@@ -176,6 +178,8 @@ def load_project_plan(path: str, as_of: Optional[date] = None) -> ProjectPlan:
             ancestors=_to_int(get(row, "ancestors")),
             owner=_to_str(get(row, "owner")),
             status_comment=_to_str(get(row, "status_comment")),
+            comments_text=_to_str(get(row, "comments_text")),
+            task_rag=_to_str(get(row, "task_rag")),
             area=_to_str(get(row, "area")),
             phase_milestone=_to_str(get(row, "phase_milestone")),
         )

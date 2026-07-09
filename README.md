@@ -18,33 +18,36 @@ from the command line with zero setup beyond `pip install`.
 
 ## What's in here
 
-```
-agent/                  Core Python package (parser, scoring, narrative, CLI)
 data/                   Input project plans
-  Project_Plan_B.xlsx          <- the real file provided with this assignment
+  Project_Plan_B.xlsx          <- REAL, provided with this assignment (Zycus - UniSan)
+  S2P_Project.xlsx              <- REAL, provided with this assignment (Zycus - Titan, Outokumpu)
   Project_Plan_C_Sample.xlsx   <- SYNTHETIC, healthy project (for portfolio demo)
   Project_Plan_D_Sample.xlsx   <- SYNTHETIC, at-risk project (for portfolio demo)
   make_synthetic_samples.py    <- script that generated the two synthetic files
-outputs/weekly/          Generated JSON + Markdown reports (3 simulated weeks x 3 projects)
-presentation/            Script that builds the monthly executive .pptx from outputs/weekly
-.github/workflows/       GitHub Actions workflow to run the agent weekly on a schedule
-RAG_Methodology.md        One-page scoring methodology (Phase 1 deliverable)
-```
+outputs/weekly/          Generated JSON + Markdown reports (3 simulated weeks x 4 projects)
 
-## Why three projects, and why three dates, when only one file was provided?
 
-Only `Project_Plan_B.xlsx` is real. Phase 3 asks for *trend* analysis across
-a portfolio, which needs more than one project to be meaningful, so I
-generated two clearly-labeled synthetic sample plans (`_Sample` suffix, and
-called out again in the Summary tab and everywhere they're referenced) using
-the same column schema as the real file -- one representative of a healthy
-project, one of a deteriorating one.
+## Why two synthetic projects, when two real files were provided?
 
-I also ran the agent with three different `--as-of` dates against the same
-three files, two weeks apart, to simulate three weekly runs without
-fabricating different underlying task data. In production this isn't
-needed -- each real weekly run naturally produces a new snapshot as the
-underlying plan changes.
+`Project_Plan_B.xlsx` (Zycus - UniSan S2P Implementation) and
+`S2P_Project.xlsx` (Zycus - Titan S2P Implementation, for Outokumpu) are both
+real files, provided in the assignment email. Phase 3 asks for *trend*
+analysis across a portfolio, and both real files came back Red, so I kept
+the two synthetic sample plans (`Project_Plan_C_Sample.xlsx`,
+`Project_Plan_D_Sample.xlsx`, both clearly marked with the `_Sample` suffix
+and called out again in their Summary tabs) to give the portfolio a healthy
+(Green) example and a second at-risk pattern to compare against -- otherwise
+a 2-project, both-Red portfolio doesn't say much about trend or variety.
+
+I also ran the agent with three different `--as-of` dates against all four
+files, two weeks apart, to simulate three weekly runs without fabricating
+different underlying task data. In production this isn't needed -- each real
+weekly run naturally produces a new snapshot as the underlying plan changes.
+
+**To use this for real:** drop any further real project plan `.xlsx` files
+into `data/`, delete the two `_Sample` files, and run the agent normally each
+week -- the outputs directory will accumulate genuine week-over-week history
+on its own.
 
 **To use this for real:** drop your real project plan `.xlsx` files into
 `data/`, delete the two `_Sample` files, and run the agent normally each

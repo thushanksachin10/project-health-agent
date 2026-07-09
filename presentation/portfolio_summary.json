@@ -1,8 +1,8 @@
 {
   "as_of": "2026-07-09",
-  "portfolio_size": 3,
+  "portfolio_size": 4,
   "rag_counts": {
-    "Red": 2,
+    "Red": 3,
     "Green": 1
   },
   "projects": [
@@ -57,6 +57,55 @@
         "completed": 3,
         "in_progress": 3,
         "not_started": 4
+      }
+    },
+    {
+      "name": "Zycus - Titan S2P Implementation",
+      "pm": "Aftab Hashambhai",
+      "history": [
+        {
+          "as_of": "2026-06-18",
+          "rag": "Red"
+        },
+        {
+          "as_of": "2026-06-25",
+          "rag": "Red"
+        },
+        {
+          "as_of": "2026-07-02",
+          "rag": "Red"
+        }
+      ],
+      "latest_rag": "Red",
+      "trend": "flat",
+      "narrative": "Zycus - Titan S2P Implementation is off track and needs immediate leadership intervention. Schedule: 16 active task(s) are past their planned end date, within tolerance. 82 tasks (17%) are self-flagged Red in the plan. Milestones: 2 of 14 major phase(s) are past their planned end date and not yet complete (e.g. Configuration and Build phase, Production & Cutover). Blockers: 1 dependent task(s) have a passed start date but haven't started (possible blockers). 3 task(s) explicitly marked On Hold. Note: budget could not be assessed (data not available in source file) and were excluded from the composite score.",
+      "dimensions": {
+        "schedule": {
+          "label": "Red",
+          "score": 2
+        },
+        "milestones": {
+          "label": "Red",
+          "score": 2
+        },
+        "blockers": {
+          "label": "Amber",
+          "score": 1
+        },
+        "budget": {
+          "label": "Unknown",
+          "score": null
+        },
+        "sentiment": {
+          "label": "Green",
+          "score": 0
+        }
+      },
+      "task_counts": {
+        "total": 493,
+        "completed": 262,
+        "in_progress": 22,
+        "not_started": 197
       }
     },
     {
@@ -171,12 +220,13 @@
   ],
   "improving": [],
   "stable_red": [
-    "Orion ERP Migration - Falcon Manufacturing"
+    "Orion ERP Migration - Falcon Manufacturing",
+    "Zycus - Titan S2P Implementation"
   ],
   "dimension_red_amber_counts": {
-    "schedule": 3,
-    "milestones": 3,
-    "blockers": 2,
+    "schedule": 4,
+    "milestones": 4,
+    "blockers": 3,
     "sentiment": 1
   },
   "top_risk_dimension": "schedule"
