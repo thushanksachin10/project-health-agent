@@ -2,7 +2,7 @@
   "project_name": "Meridian HR Suite Rollout - Northwind Retail",
   "project_manager": "Ayesha Kulkarni",
   "as_of": "2026-07-09",
-  "source_file": "data\\Project_Plan_C_Sample.xlsx",
+  "source_file": "data/Project_Plan_C_Sample.xlsx",
   "overall_rag": "Green",
   "composite_score": 0.59,
   "dimensions": {

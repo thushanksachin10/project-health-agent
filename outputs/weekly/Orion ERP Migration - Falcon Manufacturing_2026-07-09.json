@@ -2,7 +2,7 @@
   "project_name": "Orion ERP Migration - Falcon Manufacturing",
   "project_manager": "Marcus Webb",
   "as_of": "2026-07-09",
-  "source_file": "data\\Project_Plan_D_Sample.xlsx",
+  "source_file": "data/Project_Plan_D_Sample.xlsx",
   "overall_rag": "Red",
   "composite_score": 1.76,
   "dimensions": {
