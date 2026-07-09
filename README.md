@@ -1,5 +1,15 @@
 # Project Health Reporting Agent
 
+## Start here (5-minute review path)
+If you only look at three things, look at these, in this order:
+1. **[RAG_Methodology.md](./RAG_Methodology.md)** -- the scoring framework (Phase 1), one page.
+2. **[Monthly_Executive_Update.pptx](./presentation/Monthly_Executive_Update.pptx)** -- the output a VP would actually present (Phase 3), 6 slides.
+3. **[outputs/weekly/](./outputs/weekly/)** -- pick any `.md` file to see one project's weekly report with full reasoning (Phase 2 output).
+
+The working agent itself is in `agent/` (`rag_engine.py` is the core scoring logic); run instructions are below.
+
+---
+
 Automated RAG (Red/Amber/Green) status reporting for Professional Services
 projects -- reads a project plan export, scores five health dimensions,
 writes a plain-English reasoning paragraph, and rolls everything up into a
