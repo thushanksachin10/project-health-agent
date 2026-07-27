@@ -1,0 +1,76 @@
+{
+  "project_name": "Zycus - Titan S2P Implementation",
+  "project_manager": "Aftab Hashambhai",
+  "as_of": "2026-07-27",
+  "source_file": "data/S2P_Project.xlsx",
+  "overall_rag": "Red",
+  "composite_score": 1.65,
+  "dimensions": {
+    "schedule": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "73 of 219 active tasks (33%) are past their planned end date.",
+        "82 tasks (17%) are self-flagged Red in the plan."
+      ],
+      "metrics": {
+        "overdue_count": 73,
+        "overdue_pct": 0.333,
+        "flagged_red_count": 82,
+        "flagged_amber_count": 146,
+        "critical_overdue_count": 0,
+        "spi_lite": 1.361
+      }
+    },
+    "milestones": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "4 of 14 major phase(s) are past their planned end date and not yet complete (e.g. Configuration and Build phase, Production & Cutover, Hyper Care(Measure and Adoption) Solution)."
+      ],
+      "metrics": {
+        "phases_total": 14,
+        "phases_late": 4
+      }
+    },
+    "blockers": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "45 dependent task(s) have a passed start date but haven't started (possible blockers).",
+        "3 task(s) explicitly marked On Hold."
+      ],
+      "metrics": {
+        "stuck_count": 45,
+        "on_hold_count": 3
+      }
+    },
+    "budget": {
+      "score": null,
+      "label": "Unknown",
+      "evidence": [
+        "No budget/cost-actuals data was available in this file; budget health excluded from this report (see methodology doc)."
+      ],
+      "metrics": {}
+    },
+    "sentiment": {
+      "score": 0,
+      "label": "Green",
+      "evidence": [
+        "0 of 7 status comments contain risk/delay language (keyword proxy, not true sentiment analysis)."
+      ],
+      "metrics": {
+        "comment_count": 7,
+        "negative_pct": 0.0
+      }
+    }
+  },
+  "data_quality_warnings": [],
+  "task_counts": {
+    "total": 493,
+    "completed": 262,
+    "in_progress": 22,
+    "not_started": 197
+  },
+  "narrative": "Zycus - Titan S2P Implementation is off track and needs immediate leadership intervention. Schedule: 73 of 219 active tasks (33%) are past their planned end date. 82 tasks (17%) are self-flagged Red in the plan. Milestones: 4 of 14 major phase(s) are past their planned end date and not yet complete (e.g. Configuration and Build phase, Production & Cutover, Hyper Care(Measure and Adoption) Solution). Blockers: 45 dependent task(s) have a passed start date but haven't started (possible blockers). 3 task(s) explicitly marked On Hold. Note: budget could not be assessed (data not available in source file) and were excluded from the composite score."
+}
