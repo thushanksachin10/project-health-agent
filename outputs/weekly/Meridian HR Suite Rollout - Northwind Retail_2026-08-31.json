@@ -1,0 +1,76 @@
+{
+  "project_name": "Meridian HR Suite Rollout - Northwind Retail",
+  "project_manager": "Ayesha Kulkarni",
+  "as_of": "2026-08-31",
+  "source_file": "data/Project_Plan_C_Sample.xlsx",
+  "overall_rag": "Red",
+  "composite_score": 1.41,
+  "dimensions": {
+    "schedule": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "4 of 5 active tasks (80%) are past their planned end date.",
+        "2 critical-path task(s) overdue.",
+        "Actual progress is running at 59% of the pace needed for the elapsed timeline."
+      ],
+      "metrics": {
+        "overdue_count": 4,
+        "overdue_pct": 0.8,
+        "flagged_red_count": 0,
+        "flagged_amber_count": 0,
+        "critical_overdue_count": 2,
+        "spi_lite": 0.589
+      }
+    },
+    "milestones": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "4 of 9 major phase(s) are past their planned end date and not yet complete (e.g. Integration Build, UAT Planning, UAT Execution)."
+      ],
+      "metrics": {
+        "phases_total": 9,
+        "phases_late": 4
+      }
+    },
+    "blockers": {
+      "score": 1,
+      "label": "Amber",
+      "evidence": [
+        "3 dependent task(s) have a passed start date but haven't started (possible blockers)."
+      ],
+      "metrics": {
+        "stuck_count": 3,
+        "on_hold_count": 0
+      }
+    },
+    "budget": {
+      "score": null,
+      "label": "Unknown",
+      "evidence": [
+        "No budget/cost-actuals data was available in this file; budget health excluded from this report (see methodology doc)."
+      ],
+      "metrics": {}
+    },
+    "sentiment": {
+      "score": 0,
+      "label": "Green",
+      "evidence": [
+        "0 of 1 status comments contain risk/delay language (keyword proxy, not true sentiment analysis)."
+      ],
+      "metrics": {
+        "comment_count": 1,
+        "negative_pct": 0.0
+      }
+    }
+  },
+  "data_quality_warnings": [],
+  "task_counts": {
+    "total": 10,
+    "completed": 4,
+    "in_progress": 3,
+    "not_started": 3
+  },
+  "narrative": "Meridian HR Suite Rollout - Northwind Retail is off track and needs immediate leadership intervention. Schedule: 4 of 5 active tasks (80%) are past their planned end date. 2 critical-path task(s) overdue. Actual progress is running at 59% of the pace needed for the elapsed timeline. Milestones: 4 of 9 major phase(s) are past their planned end date and not yet complete (e.g. Integration Build, UAT Planning, UAT Execution). Blockers: 3 dependent task(s) have a passed start date but haven't started (possible blockers). Note: budget could not be assessed (data not available in source file) and were excluded from the composite score."
+}
