@@ -1,0 +1,74 @@
+{
+  "project_name": "Zycus - UniSan S2P Implementation",
+  "project_manager": "Rajat Bothra",
+  "as_of": "2026-09-07",
+  "source_file": "data/Project_Plan_B.xlsx",
+  "overall_rag": "Red",
+  "composite_score": 2.0,
+  "dimensions": {
+    "schedule": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "225 of 234 active tasks (96%) are past their planned end date.",
+        "42 tasks (11%) are self-flagged Red in the plan.",
+        "26 critical-path tasks are overdue.",
+        "Actual progress is running at 50% of the pace needed for the elapsed timeline."
+      ],
+      "metrics": {
+        "overdue_count": 225,
+        "overdue_pct": 0.962,
+        "flagged_red_count": 42,
+        "flagged_amber_count": 9,
+        "critical_overdue_count": 26,
+        "spi_lite": 0.503
+      }
+    },
+    "milestones": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "17 of 39 major phase(s) are past their planned end date and not yet complete (e.g. Training Phase I, Hypercare Phase I, Configuration Validation & Documentation)."
+      ],
+      "metrics": {
+        "phases_total": 39,
+        "phases_late": 17
+      }
+    },
+    "blockers": {
+      "score": 2,
+      "label": "Red",
+      "evidence": [
+        "150 dependent task(s) have a passed start date but haven't started (possible blockers)."
+      ],
+      "metrics": {
+        "stuck_count": 150,
+        "on_hold_count": 0
+      }
+    },
+    "budget": {
+      "score": null,
+      "label": "Unknown",
+      "evidence": [
+        "No budget/cost-actuals data was available in this file; budget health excluded from this report (see methodology doc)."
+      ],
+      "metrics": {}
+    },
+    "sentiment": {
+      "score": null,
+      "label": "Unknown",
+      "evidence": [
+        "No PM status comments / stakeholder notes found in this file; sentiment excluded from this report (see methodology doc)."
+      ],
+      "metrics": {}
+    }
+  },
+  "data_quality_warnings": [],
+  "task_counts": {
+    "total": 383,
+    "completed": 149,
+    "in_progress": 42,
+    "not_started": 192
+  },
+  "narrative": "Zycus - UniSan S2P Implementation is off track and needs immediate leadership intervention. Schedule: 225 of 234 active tasks (96%) are past their planned end date. 42 tasks (11%) are self-flagged Red in the plan. 26 critical-path tasks are overdue. Actual progress is running at 50% of the pace needed for the elapsed timeline. Milestones: 17 of 39 major phase(s) are past their planned end date and not yet complete (e.g. Training Phase I, Hypercare Phase I, Configuration Validation & Documentation). Blockers: 150 dependent task(s) have a passed start date but haven't started (possible blockers). Note: budget, sentiment could not be assessed (data not available in source file) and were excluded from the composite score."
+}
